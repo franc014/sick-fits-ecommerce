@@ -15,6 +15,7 @@ export const PAGINATION_QUERY = gql`
 `;
 
 export default function Pagination({ page }) {
+  console.log('page in pagination', page);
   const { error, loading, data } = useQuery(PAGINATION_QUERY);
   if (loading) return 'Loading...';
   if (error) return <DisplayError error={error} />;
