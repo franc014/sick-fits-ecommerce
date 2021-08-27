@@ -12,6 +12,7 @@ export default function Nav() {
   return (
     <NavStyles>
       <Link href="/products">Products</Link>
+
       {user && (
         <>
           <Link href="/sell">Sell</Link>
