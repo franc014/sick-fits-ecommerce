@@ -26,6 +26,7 @@ const CartItemStyles = styled.li`
 function CartItem({ cartItem }) {
   const { product } = cartItem;
   if (!product) return null;
+  console.log(formatMoney(product.price));
   return (
     <CartItemStyles>
       <img
@@ -49,7 +50,7 @@ export default function Cart() {
   const me = useUser();
   const { cartOpen, closeCart } = useCart();
   if (!me) return null;
-  console.log(me);
+
   return (
     <CartStyles open={cartOpen}>
       <header>
